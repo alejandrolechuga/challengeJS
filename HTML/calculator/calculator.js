@@ -20,24 +20,36 @@
         this.firstvalue = number;
       }
     },
-    clear: function () {
 
+    clear: function () {
+      this.firstvalue = 0;
+      this.secondavalue = 0;
     },
+
     result :function () {
+      var result = 0;
        switch (operator) {
         case "+" : 
           this.currentoperator = "+";
+          result = this.firstvalue + this.secondavalue;
         break;
         case "-" :
+         result = this.firstvalue - this.secondavalue;
         break;
         case "/" :
+          result = this.firstvalue / this.secondavalue;
         break;
         case "*" :
+          result = this.firstvalue * this.secondavalue;
         break;
       }
-      return currentvalue;
+      return result;
     },
 
+    display : function () {
+      
+    },
+    
     operation : function (operator) {
       this.currentoperator = operator;
     }
