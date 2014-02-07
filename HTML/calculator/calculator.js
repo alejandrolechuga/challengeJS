@@ -26,7 +26,6 @@
     result :function () {
        switch (operator) {
         case "+" : 
-          this.currentoperator = "+";
         break;
         case "-" :
         break;
