@@ -58,4 +58,5 @@
   calculator.operation("+");
   calculator.input(2342);
   calculator.result();
+  calculator.clear();
 }(this, document));
