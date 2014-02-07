@@ -1,12 +1,19 @@
+.calculator {
+  padding: 10px;
+  border: 1px solid gray;
+  width: 260px;
+}
 .display {
   border: 3px inset black;
-  width:300px;
-  height:50px;
+  width: 250px;
+  height: 50px;
 }
-
+.keyboard {
+  padding: 10px;
+}
 .keyboard button {
-  width : 50px;
+  width: 50px;
   height: 50px;
   font-size: 18px;
-  margin : 3px;
+  margin: 3px;
 }
