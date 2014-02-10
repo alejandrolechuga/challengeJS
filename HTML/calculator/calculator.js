@@ -5,19 +5,20 @@
 (function(window, document, undefined) {
   "use strict";
 
-  var calculator = function () {
+  var Calculator = function () {
     this.firstvalue = 0;
     this.secondvalue = 0;
     this.currentoperator;
     this.performing = false;
   };
 
-  calculator.prototype = {
+  Calculator.prototype = {
     input: function (number) {
       if (this.performing) {
         this.secondavalue = number;
       } else {
         this.firstvalue = number;
+        this.performing = true;
       }
     },
 
@@ -26,20 +27,23 @@
       this.secondavalue = 0;
     },
 
-    result :function () {
+    result: function () {
       var result = 0;
-       switch (operator) {
+       switch (this.currentoperator) {
         case "+" : 
           this.currentoperator = "+";
           result = this.firstvalue + this.secondavalue;
         break;
         case "-" :
-         result = this.firstvalue - this.secondavalue;
+          this.currentoperator = "-";
+          result = this.firstvalue - this.secondavalue;
         break;
         case "/" :
+          this.currentoperator = "/";
           result = this.firstvalue / this.secondavalue;
         break;
         case "*" :
+          this.currentoperator = "*";
           result = this.firstvalue * this.secondavalue;
         break;
       }
@@ -54,9 +58,10 @@
       this.currentoperator = operator;
     }
   };
-  calculator.input(0);
-  calculator.operation("+");
-  calculator.input(2342);
-  calculator.result();
-  calculator.clear();
+  var calc = new Calculator();
+  calc.input(0);
+  calc.operation("*");
+  calc.input(2342);
+  console.log("RESULT", calc.result());
+  calc.clear();
 }(this, document));
