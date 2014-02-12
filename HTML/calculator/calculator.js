@@ -50,10 +50,10 @@
       return result;
     },
 
-    display : function () {
+    display : function (fncallback) {
       
     },
-    
+
     operation : function (operator) {
       this.currentoperator = operator;
     }
