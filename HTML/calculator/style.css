@@ -1,19 +1,30 @@
 .calculator {
-  padding: 10px;
   border: 1px solid gray;
   width: 260px;
+  font-family: "Helvetica";
 }
+
 .display {
   border: 3px inset black;
   width: 250px;
   height: 50px;
+  background-color: black;
+  font-size: 38px;
+  color: white;
+  text-align: right;
+  vertical-align: bottom;
+  padding-top:20px;
+  overflow: hidden;
 }
+
 .keyboard {
-  padding: 10px;
+  /*padding: 10px;*/
 }
+
 .keyboard button {
   width: 50px;
   height: 50px;
-  font-size: 18px;
-  margin: 3px;
+  font-size: 18px;s
+  border-right:none !important;
+  border-bottom:1px solid black;
 }
