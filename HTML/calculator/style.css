@@ -2,6 +2,7 @@
   border: 1px solid gray;
   width: 260px;
   font-family:"HelveticaNeue-Light";
+  overflow: hidden;
 }
 
 .display {
