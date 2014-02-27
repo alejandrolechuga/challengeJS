@@ -1,7 +1,7 @@
 .calculator {
   border: 1px solid gray;
   width: 260px;
-  font-family: "Helvetica";
+  font-family:"HelveticaNeue-Light";
 }
 
 .display {
@@ -21,10 +21,12 @@
   /*padding: 10px;*/
 }
 
-.keyboard button {
-  width: 50px;
-  height: 50px;
+.keyboard .button {
   font-size: 18px;s
   border-right:none !important;
   border-bottom:1px solid black;
+  float: left;
+  background-color: #D8D9DB;
+  width: 74px;
+  height: 74px;
 }
